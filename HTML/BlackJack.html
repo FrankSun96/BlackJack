@@ -1,0 +1,103 @@
+<!--diary
+Date	               Time	                      Amendments
+2016/12/5	          23:53	               1.Think about the game GUI
+                                           2.Photoshop background.png; background1.png ; help.png; hit.png; newGame.png; stand.png; youLose.png; youWin.png; paly.png
+                                           3.Add jqurey function help(); and play(); 
+2016/12/7	          00:35	               1.Photoshop 20.png ;10.png ;30.png ;open.png;close.png; musicOff.png;musicOn.png
+                                           2.Perfect the function help(); play() and add some new function check();deal();newGame();music();dealOpen();
+                                           3.Do some modifications about deal(); winner(); hit();
+2016/12/8	          01:36	               1.Perfect the function dealOpen(); music(); newGame(); deal(); winner(); play(); check();
+                                           2.Add new function youWin(); youLose(); backToHome();
+                                           3.Add audios Game_bg.ogg; Audio_You_Win.ogg; Audio_You_Lose.ogg;
+                                           4.Add some jqurey functions in some function;
+                                           5.Almost finished;
+2016/12/9             00:40                finished
+author: Sun Qingfeng
+class: 1507
+ID:15110543088
+
+-->
+<html>
+<head>
+<title>Blackjack</title>
+<script src  = "TwentyOne.js"></script>
+<link rel="stylesheet" type="text/css" href="../CSS/BlackJack.css">
+<script type="text/javascript" src="../JavaScript/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../JavaScript/BlackJack.js"></script>
+</head>
+
+<body>
+<audio id="Game_bg" src="../Media/Game_bg.ogg" autoplay="autoplay" loop="loop"></audio>
+<div id="empty">
+	<div id="background1"><img src="../Media/t_background1.png"></div>
+	<div id="background"><img src="../Media/background.png"></div>
+	<form NAME="form1">
+	<div id="everything" hidden>
+		<div id="cardsDealer">
+			<table>
+			<tr>
+		 	<!-- Dealer-->
+			  <td> <img id="back0" border=0 src="../Media/back.png" height=100 width=86>
+			  <td> <img id="back1" border=0 src="../Media/back.png" height=100 width=86>
+			  <td> <img id="back2" border=0 src="../Media/back.png" height=100 width=86>
+			  <td> <img id="back3" border=0 src="../Media/back.png" height=100 width=86>
+			  <td> <img id="back4" border=0 src="../Media/back.png" height=100 width=86>
+			</tr>
+			</table>
+		</div>
+		<div id="cardsPlayer">
+			<table>
+			<tr>
+			  <!--Player-->
+			  <td> <img id="back5" border=0 src="../Media/back.png" height=120 width=90>
+			  <td> <img id="back6" border=0 src="../Media/back.png" height=120 width=90>
+			  <td> <img id="back7" border=0 src="../Media/back.png" height=120 width=90>
+			  <td> <img id="back8" border=0 src="../Media/back.png" height=120 width=90>
+			  <td> <img id="back9" border=0 src="../Media/back.png" height=120 width=90>
+			</tr>
+			</table>
+		</div>
+		<div id="dealerScore">
+		    <input class="score" TYPE="TEXT" SIZE=10 NAME="dealer" VALUE="0" disabled>
+		</div>
+		<div id="playerScore">
+		       <input class="score" TYPE="TEXT" SIZE=10 NAME="player" VALUE="0" disabled>
+		</div>
+		<div id="stand"><a href="#" onClick="stand();"><img src="../Media/stand.png"></a></div>
+		<div id="hit"><a href="#" onClick="hit();"><img src="../Media/hit.png"></a></div>
+		<div id="box" hidden></div>
+		<div id="resultOut"><p id="resultOutPut"></p></div>
+		
+	</div>
+	<div id="help"><a href="#" onClick="help();"><img src="../Media/help.png"></a></div>
+	<div id="play"><a href="#" onClick="play();"><img src="../Media/play.png"></a></div>
+	<div id="welcomeInterface">
+		 <p>Designed,developed by Frank Sun(Sun Qingfeng)</p>
+		 <p>ID:15110543088</p>
+		 <P>Class: 1507</P>
+		 <p>Email:568492402@qq.com</p>
+		 <p>*Pictures come from internet or myself photoshop</p>
+		 <p>*Audios come from internet</p>
+		 <p>Click help to read how to play game</p>
+	</div>
+	<div id="helpInterface" hidden>
+		<p>Click the Deal(Treasure Chests) button to deal a new hand,<br> you have three options.</p>
+	   	<p>Click the Hit button to draw another card.</p>
+	   	<p>Click the Stand button to finish the game.</p>
+	   	<p>Everytime we will count the number of dealer <br>and player win rounds</p>
+	   	<p>After you run out of your money, you lose and <br>click new to start a new game</p>
+	</div>
+	<div id="music"><a href="#" onClick="music();"><img id="playMusic" src="../Media/musicOn.png"></a></div>
+	<div id="dealOpen" hidden><a href="#" onClick="dealOpen();"><img id="dealOpenImg" src="../Media/close.png"></a></div>
+	<div id="d10" hidden><a href="#" onClick="deal(10);"><img id = "deal10" src="../Media/10.png"></a></div>
+	<div id="d20" hidden><a href="#" onClick="deal(20);"><img id = "deal20" src="../Media/20.png"></a></div>
+	<div id="d30" hidden><a href="#" onClick="deal(30);"><img id = "deal30" src="../Media/30.png"></a></div>
+	<div id="DealerMoney" hidden><p id="DealerMoneyP">50</p></div>
+	<div id="PlayerMoney" hidden><p id="PlayerMoneyP">50</p></div>
+	<div id="DealerRound" hidden><p id="DealerRoundP">0</p></div>
+	<div id="PlayerRound" hidden><p id="PlayerRoundP">0</p></div>
+	<div id="gameOver" hidden><img id="whoWin" src="../Media/youWin.png"></div>
+	<div id="newGame" hidden><a href="#"" onClick="newGame();"><img id="new" src="../Media/newGame.png"><a></div>
+	<div id="backToHome" hidden><a href="#" onClick = "backToHome();"><img id="backTo" src="../Media/backTo.png"></a></div>
+</body>
+</html>

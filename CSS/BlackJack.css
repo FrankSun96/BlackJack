@@ -1,0 +1,220 @@
+
+#background,#background1{
+	margin: 0;
+	padding:0;
+	width: 960px;
+	height: 600px;
+	position: absolute;
+}
+#background1{
+z-index: -1;
+}
+#help img,#play img{
+	width: 100px;
+	height: 50px;
+}
+#help,#play{
+	z-index: 0;
+	width: 100px;
+	height: 50px;
+}
+#help{
+	z-index: 0;
+	position: absolute;
+	left: 300px;
+	bottom: 120px;
+}
+#play{
+	position: absolute;
+	left: 530px;
+	bottom: 120px;
+}
+#welcomeInterface{
+	position: absolute;
+	left: 300px;
+	bottom: 200px;
+	font-weight: bold;
+}
+#helpInterface{
+	position: absolute;
+	left: 270px;
+	bottom: 210px;
+	font-weight: bold;
+}
+#cards{
+	position: absolute;
+	left: 400px;
+	bottom: 200px;
+}
+#empty{
+	width: 960px;
+	height: 600px;
+	position: absolute;
+	left: 200px;
+}
+#everything{
+	position: absolute;
+	left: 150px;
+	bottom: 0px;
+}
+#cardsDealer{
+	position: absolute;
+	left: 50px;
+	bottom: 180px;
+}
+#cardsPlayer{
+	position: absolute;
+	left: 165px;
+	bottom: 40px;
+}
+#dealerScore{
+	position: absolute;
+	bottom:365px;
+	left: -120px;
+	width: 200px;
+}
+#playerScore{
+	position: absolute;
+	bottom:235px;
+	right: -780px;
+	width: 200px;
+}
+
+#music, #music img{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+#dealOpen{
+	width: 70px;
+	height: 70px;
+	top: 480px;
+	left: 130px;
+	position: absolute;
+}
+#d10{
+	position: absolute;
+	bottom: 70px;
+	left: 230px;
+}
+#d20{
+	position: absolute;
+	bottom: 105px;
+	left: 200px;
+}
+#d30{
+	position: absolute;
+	bottom: 110px;
+	left: 155px;
+}
+#stand{
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	left: 380px;
+	bottom: 360px;
+}
+#hit{
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	left: 170px;
+	bottom: 360px;
+}
+#stand img, #hit img{
+	width: 100px;
+	height:50px;
+
+}
+#DealerMoney{
+	position: absolute;
+	left: 34px;
+	top: 24px;
+}
+#DealerMoneyP{
+	font-size: 30px;
+	color: #a07800;
+	font-weight: bold;
+}
+#PlayerMoney{
+	position: absolute;
+	left: 720px;
+	top: 24px;
+}
+#PlayerMoneyP{
+	font-size: 30px;
+	color: #a07800;
+	font-weight: bold;
+}
+#PlayerRound{
+	position: absolute;
+	left: 555px;
+	top: 24px;
+}
+#PlayerRoundP{
+	font-size: 30PX;
+	color: #643c14;
+	font-weight: bold;
+}
+#DealerRound{
+	top: 24px;
+	position: absolute;
+	left: 195px;
+}
+#DealerRoundP{
+	font-size: 30px;
+	color: #643c14;
+	font-weight: bold;
+}
+#gameOver{
+	position: absolute;
+	left: 115px;
+	top: 80px;
+}
+#newGame, #newGame img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 215px;
+	bottom: 60px;
+}
+input[type="text"]{
+    background:none;
+    text-align: center;
+   	color: white;
+   	border-width:0px;
+   	width: 200px;
+}
+.score{
+	font-size: 40px;
+}
+#resultOut{
+	position: absolute;
+	width: 350px;
+	left: 155px;
+	top: -495px;
+}
+#resultOutPut{
+	text-align: center;
+	font-size: 35px;
+	font-weight:bold;
+	color: white;
+}
+#box{
+	position: absolute;
+	width: 350px;
+	height: 115px;
+	left: 155px;
+	top: -495px;
+	background: #000;
+	filter:alpha( Opacity =  50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+#backToHome{
+	position: absolute;
+	left: 800px;
+	top: 10px;
+}
